@@ -1,0 +1,1 @@
+# session目录需要确保apache用户拥有写权限

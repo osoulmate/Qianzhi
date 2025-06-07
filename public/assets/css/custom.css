@@ -1,0 +1,33 @@
+/*==================================================================================
+    Custom Stylesheet (Any custom styling you want to apply should be defined here).
+====================================================================================*/
+ul {
+ /* list-style-type: none; */
+}
+ul.sub-menu {
+  list-style-type: none;
+ }
+.qz-footer-bg {
+	background-color: #2e373f;
+}
+.qz-footer-a1 a{
+	color: #949494;
+}
+.qz-footer-a1 a:hover{
+	color: blue;
+}
+.qz-footer-a2 a{
+	color: #7f7f7f;
+}
+.qz-footer-a2 a:hover{
+  color: #FF7171;
+  text-decoration: none;
+  outline: none !important;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+img{
+  display:block;
+  max-width:100%;
+  height:auto
+}
