@@ -8,7 +8,7 @@ ul.sub-menu {
   list-style-type: none;
  }
 .qz-footer-bg {
-	background-color: #2e373f;
+	background-color: #263238;
 }
 .qz-footer-a1 a{
 	color: #949494;
@@ -30,4 +30,85 @@ img{
   display:block;
   max-width:100%;
   height:auto
+}
+body.night{
+    background-color: #263238;
+}
+body.night .header{
+    color: #f4f7f8;
+    background-color: #263238;
+}
+body.night .header .nav-menu a{
+    color: #f4f7f8;
+}
+body.night .header .nav-menu a:hover{
+  color: #FF7171;
+  text-decoration: none;
+  outline: none !important;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+body.night .header .nav-menu-cover ul{
+    color: #f4f7f8;
+    background-color: #263238;
+}
+body.night .header .header-fixed{
+    color: #f4f7f8;
+    background-color: #263238;
+}
+
+body.night .header .nav-menu .sub-menu{
+    color: #f4f7f8;
+    background-color: #263238;
+}
+body.night .header .mobile-menu-cover .search-toggle-open{
+    color: #f4f7f8;
+}
+body.night .nav-search-box{
+    color: #f4f7f8;
+    background-color: #263238;
+}
+body.night .nav-search-box button{
+    background-color: #fff;;
+}
+body.night .container .row .qz-ul li{
+    color: #f4f7f8;
+}
+body.night .container .row .qz-ul a{
+    color: #f4f7f8;
+}
+body.night .container .row .qz-ul a:hover{
+  color: #FF7171;
+  text-decoration: none;
+  outline: none !important;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+body.night .container .row .post-default{
+    background-color: #263238;
+    color: #f4f7f8;
+}
+body.night .container .row .post-default .post-data .title h2{
+    background-color: #263238;
+    color: #f4f7f8;
+}
+    
+body.night .container .row .post-default .post-data a{
+    color: #f4f7f8;
+}
+body.night .container .row .post-default .post-data a:hover{
+  color: #FF7171;
+  text-decoration: none;
+  outline: none !important;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+body.night .container .row .post-default .post-data p{
+    color: #f4f7f8;
+}
+body.night .navbar-brand{
+    color: #f4f7f8;
+}
+body.night .qz-comment-add{
+    background-color: #263238;
 }

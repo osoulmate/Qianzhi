@@ -44,7 +44,7 @@
             <?php endforeach?>
             <?php endif?>
             <?php endforeach?>
-            <ul class="pagination">
+            <ul class="pagination justify-content-center" style="position: relative;">
                 <?php if (($currentPageNumber == 1)&&($currentPageNumber < $totalPages)):?>
                 <li class="page-item disabled">
                     <a class="page-link" href="#" tabindex="-1" aria-disabled="true">

@@ -18,7 +18,7 @@
                 <div class="post-default post-has-no-thumb">
                     <div class="post-data">
                         <div class="title">
-                            <h2><?php echo $html->link($article[0]['Article']['title'],$dateFormat.'/'.$article[0]['Article']['title']) ?></h2>
+                            <h2><?php echo $article[0]['Article']['title'] ?></h2>
                         </div>
                         <!-- Post Meta -->
                         <ul class="nav meta align-items-center">
@@ -35,7 +35,7 @@
                             </li>
                         </ul>
                         <!-- Post Desc -->
-                        <div class="desc">
+                        <div id="myContent" class="desc">
                             <div>
                                 <?php echo $article[0]['Article']['content'];?>
                             </div>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <?php endif;?>
-                <ul style="margin:20px 0px 10px 0px;padding:0px;list-style-type: none;">
+                <ul class="qz-ul" style="margin:20px 0px 10px 0px;padding:0px;list-style-type: none;">
                     <?php if (empty($previous) && !empty($next)): 
                         $date = mb_substr($next[0]['Article']['date'],0,10,'utf-8');
                         $dateFormat = implode('/',explode('-', $date));

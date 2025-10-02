@@ -30,7 +30,7 @@
             </div>             
             <?php foreach ($comments as $subcomment):?>
             <?php if($subcomment['Comment']['parent_id']==$comment['Comment']['id']):?>
-            <div class="qz-comment-reply pull-right">
+            <div class="qz-comment-add qz-comment-reply pull-right">
                 <div class="qz-comment-img pull-left"><img src="/img/header-img-comment_03.png" alt=""></div>
                 <div  class="qz-comment-reply-body pull-left">                        
                     <div class="qz-comment-meta">
@@ -49,7 +49,7 @@
             </div>
             <?php foreach ($comments as $subsubcomment):?>
             <?php if($subsubcomment['Comment']['parent_id']==$subcomment['Comment']['id']):?>
-            <div class="qz-comment-reply pull-right">
+            <div class="qz-comment-add qz-comment-reply pull-right">
                 <div class="qz-comment-img pull-left"><img src="/img/default.png" alt=""></div>
                 <div  class="qz-comment-reply-body pull-left">                        
                     <div class="qz-comment-meta">
@@ -68,7 +68,7 @@
             </div>
             <?php foreach ($comments as $subsubsubcomment):?>
             <?php if($subsubsubcomment['Comment']['parent_id']==$subsubcomment['Comment']['id']):?>
-            <div class="qz-comment-reply pull-right">
+            <div class="qz-comment-add qz-comment-reply pull-right">
                 <div class="qz-comment-img pull-left"><img src="/img/header-img-comment_03.png" alt=""></div>
                 <div  class="qz-comment-reply-body pull-left">                        
                     <div class="qz-comment-meta">

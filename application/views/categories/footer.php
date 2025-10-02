@@ -2,7 +2,7 @@
     <!-- Footer -->
     <footer class="footer-container d-flex text-center qz-footer-bg">
         <div class="container">
-            <div class="row align-items-center footer">
+            <div class="row align-items-center">
                 <div class="col-md-12 d-flex justify-content-center order-md-2 order-1">
                     <div class="footer-social qz-footer-a2">
                         <a href="#"><i class="zi zi_tmQq zi_1x"></i></a>
@@ -22,7 +22,7 @@
                     &nbsp;&nbsp;
                 </div>
             </div>
-            <div class="row align-items-center footer">
+            <div class="row align-items-center">
                 <div class="col-md-12 d-flex justify-content-center order-md-2 order-1">
                     <p>千知，永无止境</p>
                 </div>
@@ -53,6 +53,20 @@
 
     <!-- ==== Custom js file ==== -->
     <?php echo $html->includeJsEx("assets/js/custom"); echo PHP_EOL;?>
+<script type="text/javascript">
+function switchNightMode(){
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if(night == '0'){
+        document.body.classList.add('night');
+        document.cookie = "night=1;path=/"
+        console.log('深色模式开启');
+    }else{
+        document.body.classList.remove('night');
+        document.cookie = "night=0;path=/"
+        //console.log('深色模式关闭');
+    }
+}
+</script>
 </body>
 </html>
 

@@ -30,7 +30,7 @@
                             </li>
                         </ul>
                         <!-- Post Desc -->
-                        <div class="desc">
+                        <div id="myContent" class="desc">
                             <p>
                                 <?php echo mb_substr(strip_tags($article['Article']['content'],'<br>'),0,150,'utf-8')?>
                             </p>
