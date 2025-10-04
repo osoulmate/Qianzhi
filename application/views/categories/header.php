@@ -1,6 +1,6 @@
 <?php session_start();?>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;margin: 0;">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
     <?php echo $html->includeCssEx("assets/css/custom"); echo PHP_EOL;?>
     <?php echo $html->includeJsEx("assets/js/jquery-1.12.1.min"); echo PHP_EOL;?>
 </head>
-<body class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
+<body class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>" style="height: 100%;margin: 0;">
     <!-- Nav Search Box -->
     <div class="nav-search-box">
         <form method="post" action="/search">
@@ -135,5 +135,5 @@
     </header>
     <!-- End of Header -->
 <div>
-
+<!-- 下接正文区域 如index.php,article.php等-->
 

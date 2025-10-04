@@ -8,6 +8,7 @@ ul.sub-menu {
   list-style-type: none;
  }
 .qz-footer-bg {
+    margin-top: auto;
 	background-color: #263238;
 }
 .qz-footer-a1 a{

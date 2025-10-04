@@ -1,4 +1,6 @@
+    <!-- 上接正文区域 如index.php,article.php等-->
     </div>
+    <div id="wrapper" style="margin-bottom:0;">
     <!-- Footer -->
     <footer class="footer-container d-flex text-center qz-footer-bg">
         <div class="container">
@@ -29,6 +31,7 @@
             </div>
         </div>
     </footer>
+    </div>
     <!-- End of Footer -->
 
     <!-- Back to Top Button -->

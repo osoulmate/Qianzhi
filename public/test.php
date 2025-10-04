@@ -4,7 +4,7 @@
   error_reporting(E_ALL ^ E_DEPRECATED);
   $db_host="localhost";
   $db_user="root";
-  $db_passwd="M!0RyHg)x1E%EqcNz$";
+  $db_passwd="root";
   $db_name="qianzhi_db";
   $query = "SELECT SESSION_USER(), CURRENT_USER(),now();";
   echo("<BR>---------------------------mysqli_connect 测试------------------------<BR><BR>");
