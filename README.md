@@ -31,17 +31,21 @@ curl -L http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm \
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum install -y mysql-community-server
 ```
-###### 配置http服务，以支持.htaccess伪静态功能
+###### 配置http服务（不再依赖 .htaccess 重写）
 ```
-sed -i "s/AllowOverride None/AllowOverride All/g" /etc/httpd/conf/httpd.conf
 sed -i "s/DirectoryIndex index.html/DirectoryIndex index.php index.html/g" /etc/httpd/conf/httpd.conf
+# 将站点根目录直接指向项目 public 目录
+sed -i 's#DocumentRoot "/var/www/html"#DocumentRoot "/var/www/html/public"#g' /etc/httpd/conf/httpd.conf
 cat >> /etc/httpd/conf/httpd.conf <<EOF
 <FilesMatch \.php$>
          SetHandler "proxy:fcgi://127.0.0.1:9000"
 </FilesMatch>
-#RewriteEngine on
-#RewriteCond %{SERVER_PORT} !^443$
-#RewriteRule ^/?(.*)$ https://%{SERVER_NAME}/$1 [L,R]
+# 通过虚拟主机级别兜底，而不是 .htaccess
+<Directory "/var/www/html/public">
+    AllowOverride None
+    Require all granted
+    FallbackResource /index.php
+</Directory>
 EOF
 ```
 ###### 配置mysql
@@ -151,26 +155,23 @@ apt-get update && apt install apache2 php php-mysql \
     php7.4-mbstring php7.4-curl mysql-server mysql-client -y 
 ```
 
-###### 开启apache2 重写功能
+###### 配置apache2（不再依赖 .htaccess 重写）
 ```
-a2enmod rewrite
 cat >> /etc/apache2/sites-enabled/000-default.conf<<EOF
 <VirtualHost _default_:443>
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html
+    DocumentRoot /var/www/html/public
  
     SSLEngine on
     SSLCertificateFile /etc/apache2/ssl/zhangqingya.cn.cer
     SSLCertificateKeyFile /etc/apache2/ssl/zhangqingya.cn.key
     ErrorLog ${APACHE_LOG_DIR}/error_443.log
     CustomLog ${APACHE_LOG_DIR}/access_443.log combined 
-    <Directory />
-        Require all granted
-    </Directory>
 </VirtualHost>
-<Directory /var/www/html/>
+<Directory /var/www/html/public/>
     Options Indexes FollowSymLinks
-    AllowOverride All
+    AllowOverride None
+    FallbackResource /index.php
     Require all granted
 </Directory>
 EOF
