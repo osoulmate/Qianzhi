@@ -1,5 +1,2 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule    ^$    public/    [L]
-    RewriteRule    (.*) public/$1    [L]
- </IfModule>
+# Deprecated: routing is handled by web server vhost fallback and public/index.php.
+# This file intentionally keeps no rewrite/redirect rules.
